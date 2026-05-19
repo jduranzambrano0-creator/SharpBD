@@ -9,20 +9,22 @@ namespace ejemploBd
     public partial class GestionPreguntas : Form
     {
         // LO QUE ESTABA MAL: La cadena venía vacía y la variable privada sugerida tenía un guión bajo que rompía la coherencia con el README.
-       
+        // CORRECCIÓN: Colocar la ruta de conexión a la base de datos 'peducativa' y nombrar la variable 'idModulo' tal como dicta el examen.
         private string cadenaConexion = "Server=localhost;Database=peducativa;Uid=root;Pwd=;";
         private int idModulo;
 
         // LO QUE ESTABA MAL: Los guiones en los parámetros del constructor original.
-        
+        // CORRECCIÓN: Definir el constructor para que acepte un único entero llamado 'idRecibido', siguiendo la estructura oficial de la evaluación.
         public GestionPreguntas(int idRecibido)
         {
             InitializeComponent();
 
-            // ESTABA MAL: El espacio estaba vacío sin lógica de asignación
+            // LO QUE ESTABA MAL: El espacio estaba vacío sin lógica de asignación.
+            // CORRECCIÓN: Asignar el parámetro de entrada a nuestra variable de clase para conservar el ID del módulo a lo largo de la sesión.
             this.idModulo = idRecibido;
 
-            // ESTABA MAL: Faltaba invocar al método; la grilla de preguntas se quedaba suspendida en blanco.
+            // LO QUE ESTABA MAL: Faltaba invocar al método; la grilla de preguntas se quedaba suspendida en blanco.
+            // CORRECCIÓN: Llamar explícitamente a la función para que ejecute el filtro SQL inmediatamente al abrir el formulario.
             CargarPreguntas();
         }
 

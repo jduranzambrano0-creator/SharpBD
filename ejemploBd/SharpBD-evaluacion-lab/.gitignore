@@ -1,0 +1,27 @@
+# --- SharpDevelop & Visual Studio ---
+[Bb]in/
+[Oo]bj/
+.vs/
+*.exe
+*.pdb
+*.suo
+*.user
+*.cache
+*.db
+*.opendb
+*.sln.docstates
+*.userprefs
+
+# --- Archivos de Base de Datos locales ---
+*.bak
+*.log
+*.sql.old
+
+# --- Archivos de Sistema ---
+.DS_Store
+Thumbs.db
+
+# --- DLLs ---
+# Se permiten DLLs para asegurar que MySql.Data.dll en LIB_CONEXION sea rastreado
+# ya que el proyecto depende de referencias locales y no de NuGet.
+# *.dll

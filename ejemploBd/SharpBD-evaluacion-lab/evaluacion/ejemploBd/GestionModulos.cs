@@ -64,11 +64,8 @@ namespace ejemploBd
         }
 
         void BtnGuardarClick(object sender, EventArgs e)
-        {
-            // Cierra la ventana actual confirmando que la operación terminó correctamente
-            // NO TENIA NINGUNA ACCION EN EL PROGRAMA ORIGINAL SE LE DIO FUNCIONALIDAD
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-    }
+		{
+			
+		}
+	}
 }
